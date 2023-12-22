@@ -1,16 +1,2 @@
-<div class="w-full">
-  <div class="mb-3 bg-red-400 flex w-full p-7 justify-center">
-    <%= form_tag searches_path, method: :get do %>
-      <%= text_field_tag :q, nil, placeholder: "Search", class: "rounded w-6/12"%>
-    <% end %>
-  </div>
-  
-  <div>
-    <h2 class="text-red-500 text-5xl block mb-4">Most Popular searches</h2>
-    <div class="flex justify-between">
-      <% @searches.each do |s| %>
-        <p class="block"><%= s.query %></p>
-      <% end %>
-    </div>
-  </div>
-</div>
+<h1>Searches#index</h1>
+<p>Find me in app/views/searches/index.html.erb</p>
