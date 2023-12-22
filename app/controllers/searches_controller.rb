@@ -10,13 +10,11 @@ class SearchesController < ApplicationController
 
     if @search_query.save
       redirect_to searches_path
-    else
-      # Handle validation errors
     end
   end
 
   def autocomplete
-    render json: UserQuery.search(params[:term], field: { query: :text_start }).map(&:title)
+    render json: UserQuery.search(params[:term]).map(&:title)
   end
 
   private
