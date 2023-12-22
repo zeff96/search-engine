@@ -6,9 +6,11 @@
   </div>
   
   <div>
-    <h2 class="text-red-500 text-5xl block">Most Popular searches</h2>
-    <% @searches.each do |s| %>
-      <p class="block"><%= s.query %></p>
-    <% end %>
+    <h2 class="text-red-500 text-5xl block mb-4">Most Popular searches</h2>
+    <div class="flex justify-between">
+      <% @searches.each do |s| %>
+        <p class="block"><%= s.query %></p>
+      <% end %>
+    </div>
   </div>
 </div>
